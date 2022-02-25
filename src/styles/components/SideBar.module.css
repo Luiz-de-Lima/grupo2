@@ -1,3 +1,20 @@
-figure .logo, div {
-    margin: 0;
+.sideBar {
+    position: relative;
+    width: 100%;
+}
+
+.sideBar .logo{
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+@media(max-width: 700px) {
+    .sideBar .logo {
+        width: 40px;
+    }
 }
