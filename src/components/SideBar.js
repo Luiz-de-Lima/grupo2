@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/components/SideBar.module.css';
-import sidebar from '../asssents/Top-Pokédex.png'
-import logo from '../asssents/pokeball-png.png'
+import sidebar from '../assets/Top-Pokédex.png'
+import logo from '../assets/pokeball-png.png'
 
 export function Sidebar() {
     return (

@@ -1,37 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.css'
+import api from '../../services/api'
+
 const Cards = () => {
+    const [pokemons,setPokemon] = useState()
+useEffect(()=>{
+    api.get('https://pokeapi.co/api/v2/pokemon/?offset=151&limit=302',{
+
+    }).then(response=>{
+        setPokemon(response.data)
+        console.log(response.data)
+    })
+
+},[])
+    
     return (
         <div className='container'>
             <h1>Pokedex</h1>
-            <div className='cards'>
-                <div className='card-item'>
-                    <div className='card-descricao'>
-                        <h2>Bulbasaur</h2>
-                        <p>Grass</p>
-                        <p>Poison</p>
-                    </div>
-
-                    <div className='card-image'>
-
-                    </div>
-                </div>
-                <div className='card-item'>
-                    <div className='card-descricao'>
-                        <h2>Bulbasaur</h2>
-                        <p>Grass</p>
-                        <p>Poison</p>
-                    </div>
-
-                    <div className='card-image'>
-
-                    </div>
-                </div>
-               
-            </div>
+        { {pokemons.map(pokemon =>{
+            return(
+                <h1>{pokemon.name}</h1>
+            )
+        })} }
+ 
         </div>
-
-    )
-}
-
+    )}
 export default Cards;
