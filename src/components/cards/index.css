@@ -5,18 +5,19 @@
 }
 .container h1{
     width: 100%;
+    text-align: center;
 }
 .cards{
     display: flex;
-    justify-content: space-between;
-    background-color: rebeccapurple;
+    justify-content: space-around;
+    width: 80%;
 }
 .card-item{
     background-color: rgb(94, 197, 94);
     color: white;
     border-radius: 8px;
     padding: 5px;
-    width: 50%;
+    
     margin: 2px;
 }
 .card-item:hover{
