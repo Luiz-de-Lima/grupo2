@@ -3,7 +3,9 @@ import './index.css'
 const Cards = () => {
     return (
         <div className='container'>
+            <h1>Pokedex</h1>
             <div className='card-item'>
+                
                 <div className='card-descricao'>
                     <h2>Bulbasaur</h2>
                     <p>Grass</p>
